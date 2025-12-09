@@ -1,0 +1,385 @@
+/* STALKER GNOME Shell Theme - PRIORITY OVERRIDES FIRST */
+/* Top bar panel */
+#panel {
+    background-color: #cc6666;
+    color: #ffffff;
+    font-weight: normal;
+    height: 2.2em;
+}
+
+
+/* === CRITICAL: OVERRIDE ALL BLUES === */
+.button:checked,
+.button:active,
+.icon-button:checked,
+.icon-button:active,
+.quick-toggle:checked,
+.quick-toggle:active,
+.toggle-switch:checked,
+StButton:checked {
+  background-color: #5f7060 !important;
+  color: #ffffff !important;
+  border: 1px solid #7f9080 !important;
+  background-image: none !important;
+}
+
+.quick-toggle:hover {
+  background-color: #4a4a4a !important;
+}
+
+.quick-toggle:checked:hover {
+  background-color: #7f9080 !important;
+}
+
+.quick-toggle {
+  background-color: #3a3a3a !important;
+  border: 1px solid #5a5a5a !important;
+}
+
+/* Override selection colors */
+.popup-menu-item:checked,
+.popup-menu-item:active {
+  background-color: #5f7060 !important;
+  color: #ffffff !important;
+}
+
+/* Base colors */
+stage {
+  color: #e6e6e6;
+}
+
+/* === ENHANCED GREEN ACCENTS FOR GNOME SHELL === */
+
+/* Panel items - green on hover */
+.panel-button:hover {
+  background-color: rgba(111, 126, 111, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+.panel-button:active,
+.panel-button:checked {
+  background-color: rgba(111, 126, 111, 0.4) !important;
+}
+
+/* Workspace thumbnails - green border for active */
+.workspace-thumbnail-indicator {
+  border: 3px solid #6f7e6f !important;
+}
+
+/* App switcher - green highlight */
+.switcher-list .item-box:selected {
+  background-color: #6f7e6f !important;
+  border: 2px solid #8b9b8c !important;
+}
+
+/* Search results - green selection */
+.search-section-content .list-search-result:selected,
+.search-section-content .list-search-result:focus {
+  background-color: #6f7e6f !important;
+  border-left: 3px solid #8b9b8c !important;
+}
+
+/* Overview search - green */
+#searchEntry {
+  border: 2px solid #5a6d5b !important;
+}
+
+#searchEntry:focus {
+  border-color: #6f7e6f !important;
+  box-shadow: 0 0 8px rgba(111, 126, 111, 0.4) !important;
+}
+
+/* Calendar - green for today */
+.calendar-day-base.calendar-day-heading {
+  color: #7a8a7d !important;
+}
+
+.calendar-today {
+  background-color: #6f7e6f !important;
+  color: white !important;
+  border-radius: 50% !important;
+  font-weight: bold !important;
+}
+
+.calendar-day:hover {
+  background-color: rgba(111, 126, 111, 0.2) !important;
+}
+
+.calendar-day:selected {
+  background-color: #6f7e6f !important;
+  color: white !important;
+}
+
+/* Notifications - green accents */
+.notification-banner {
+  border-left: 3px solid #6f7e6f !important;
+}
+
+.notification-banner:hover {
+  background-color: rgba(90, 109, 91, 0.3) !important;
+}
+
+.notification-button:hover {
+  background-color: #5a6d5b !important;
+}
+
+/* Message list - green */
+.message-list-section-title {
+  color: #7a8a7d !important;
+}
+
+.message:hover {
+  background-color: rgba(111, 126, 111, 0.1) !important;
+}
+
+/* System menu - green hover */
+.popup-menu-item:hover {
+  background-color: #6f7e6f !important;
+}
+
+/* Sliders - green fill */
+.slider {
+  -barlevel-active-background-color: #7a8a7d !important;
+  -barlevel-active-border-color: #8b9b8c !important;
+}
+
+/* OSD (on-screen display) - green accents */
+.osd-window {
+  border: 2px solid #5a6d5b !important;
+}
+
+.level {
+  /* OSD track: rectangular, darker green-tinted background for subtlety */
+  background-color: rgba(20,24,20,0.9) !important;
+  min-height: 18px !important;
+  border-radius: 2px !important; /* nearly rectangular */
+  padding: 3px 4px !important;
+}
+
+.level-bar {
+  /* OSD fill (level) - darker green by default, will be bright when active */
+  background-color: #5a6d5b !important; /* darker STALKER green */
+  min-height: 18px !important;
+  border-radius: 2px !important;
+}
+
+/* OSD label (text) - ensure high contrast */
+.osd-window label,
+.osd-window .osd-label {
+  color: #e9e5d4 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6) !important;
+}
+
+/* Make OSD container more opaque so bar is visible over dark backgrounds */
+.osd-window {
+  background-color: rgba(12,14,12,0.95) !important; /* darker container */
+  padding: 8px 12px !important;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.7) !important;
+}
+
+/* Muted state: show red fill */
+.osd-window.muted .level-bar {
+  background-color: #cc6666 !important; /* darker muted red */
+}
+
+/* When a volume change occurs, animate fill to brighter green for visibility */
+.osd-window .level-bar.active {
+  background-color: #8b9b8c !important; /* brighter highlight during change */
+}
+
+/* Dash (app launcher) - green */
+.dash-item-container .app-well-app:hover {
+  background-color: rgba(111, 126, 111, 0.3) !important;
+}
+
+.dash-item-container .app-well-app:active,
+.dash-item-container .app-well-app:checked {
+  background-color: #6f7e6f !important;
+}
+
+/* Running app indicator - green dot */
+.app-well-app-running-dot {
+  background-color: #8b9b8c !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+
+/* Window close button - keep red, but add green hover for minimize/maximize */
+.window-button:hover {
+  background-color: rgba(111, 126, 111, 0.5) !important;
+}
+
+/* Overview background - subtle green tint */
+#overview {
+  background-color: rgba(58, 77, 62, 0.95) !important;
+}
+
+/* App folders - green background */
+.app-folder-dialog {
+  border: 3px solid #6f7e6f !important;
+}
+
+.app-folder-dialog .folder-name-entry {
+  border-bottom: 2px solid #6f7e6f !important;
+}
+
+/* Screenshots UI - green */
+.screenshot-ui-area-indicator {
+  border: 3px solid #8b9b8c !important;
+  background-color: rgba(111, 126, 111, 0.2) !important;
+}
+
+.screenshot-ui-panel {
+  border: 2px solid #5a6d5b !important;
+}
+
+/* Power/volume sliders - green */
+.quick-slider {
+  border: 1px solid #5a6d5b !important;
+}
+
+.quick-slider .slider-bin > StBoxLayout {
+  background-color: #7a8a7d !important;
+}
+
+/* Screenshot UI - Transparent with green tint */
+.screenshot-ui-screen-screenshot,
+.screenshot-ui-window-screenshot,
+.screenshot-ui-area-screenshot {
+  background-color: rgba(26, 30, 26, 0.3);
+}
+
+.screenshot-ui-shot-cast-container {
+  background-color: rgba(26, 30, 26, 0.4);
+}
+
+.screenshot-ui-tooltip {
+  background-color: rgba(42, 47, 42, 0.95);
+  border: 1px solid #6f7e6f;
+  color: #e9e5d4;
+}
+
+.screenshot-ui-capture-button {
+  background-color: #6f7e6f;
+  border: 1px solid #8b9b8c;
+  color: #e9e5d4;
+}
+
+.screenshot-ui-capture-button:hover {
+  background-color: #8b9b8c;
+}
+
+.screenshot-ui-capture-button:active {
+  background-color: #5a6d5b;
+}
+
+.screenshot-ui-close-button {
+  background-color: #3a3a3a;
+  border: 1px solid #4d4d4d;
+}
+
+.screenshot-ui-close-button:hover {
+  background-color: #4d4d4d;
+}
+
+/* Make the overlay less opaque */
+.screenshot-ui-area-selector {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.screenshot-ui-area-selector-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ====== FORCEFUL OSD OVERRIDES - ensure rectangular STALKER look ====== */
+/* Highly specific selectors to override other theme rules or shell defaults */
+.shell .osd-window,
+window .osd-window,
+.osd-window {
+  border-radius: 4px !important;
+  min-width: 360px !important;
+  max-width: 80vw !important;
+  padding: 8px 14px !important;
+  background-color: rgba(8,10,8,0.96) !important;
+  border: 1px solid rgba(111,126,111,0.12) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.75) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+/* Track: rectangular and stretches to fill available space */
+.osd-window .level,
+.osd-window .level > * {
+  background-color: rgba(18,22,18,0.95) !important;
+  border-radius: 2px !important;
+  min-height: 18px !important;
+  height: 18px !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fill element(s) must be visible - some shells nest actors inside .level-bar */
+.osd-window .level-bar,
+.osd-window .level-bar > *,
+.osd-window .level > .level-bar,
+.osd-window .level > .level-bar > * {
+  background-color: #5a6d5b !important; /* darker green base */
+  min-height: 18px !important;
+  height: 100% !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.6) !important;
+  border: 1px solid rgba(111,126,111,0.12) !important;
+}
+
+/* Brighten the fill while volume is changing (shell often toggles a class) */
+.osd-window .level-bar.active,
+.osd-window .level-bar > *.active,
+.osd-window.active .level-bar {
+  background-color: #8b9b8c !important; /* bright STALKER green */
+}
+
+/* Muted state should be clearly red */
+.osd-window.muted .level-bar,
+.osd-window.muted .level-bar > * {
+  background-color: #cc6666 !important;
+  border-color: rgba(204,102,102,0.7) !important;
+}
+
+/* Icon and label visibility */
+.osd-window .osd-icon,
+.osd-window .icon,
+.osd-window .symbolic {
+  color: #e9e5d4 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.osd-window .osd-label {
+  color: #e9e5d4 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+
+/* Reduce overly large rounded background behind icon (bubble) if present */
+.osd-window .icon-background,
+.osd-window .icon-frame,
+.osd-window .osd-icon-wrapper {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* If the shell uses CSS animations or transient classes, keep fill visible */
+.osd-window .level-bar > *[style],
+.osd-window .level > *[style] {
+  background-color: #8b9b8c !important;
+}
+
+/* end of forceful OSD overrides */
+

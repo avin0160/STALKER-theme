@@ -393,6 +393,36 @@ list row:selected,
     color: #e9e5d4;
 }
 
+/* Force red selection for dialogs, menus and options to improve contrast */
+window .dialog .row:selected,
+window .dialog .row:selected:focus,
+window .dialog .listbox .row:selected,
+window .dialog .menuitem:selected,
+window .dialog .menuitem:selected:focus,
+window .dialog .combobox .row:selected,
+window .menu .menuitem:selected,
+window .menu .menuitem:selected:focus,
+window .combobox .row:selected,
+window .combobox .row:selected:focus,
+window .option:selected,
+window option:selected,
+window .dialog .radio row:selected,
+window .combobox popover .row:selected {
+    background-color: #cc6666 !important;
+    color: #ffffff !important;
+    border: 1px solid #8b3f3f !important;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.6) inset !important;
+}
+
+/* Make selected text stand out in menus/lists */
+.menuitem:selected .label,
+.list row:selected .label,
+.combobox .row:selected .label {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+
 /* Toolbars */
 toolbar {
     background-color: #3a4d3e;
